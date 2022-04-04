@@ -1,0 +1,48 @@
+<div class="banner">
+  <img src="assets/images/sausagedogcropped.jpeg" alt="picture of Dachshund dog" class="banner-picture">
+  <h1 class="banner-heading">The Dachshund Collection</h1>
+</div>
+
+<div class="favs">
+  <h4><span *ngIf="loading">Loading...</span></h4>
+  <a routerLink="/favourites" class="btn-favourites">
+    <fa-icon [icon]="fasHeart" class="solid-heart-icon"></fa-icon>Favourites
+  </a>
+</div>
+
+<div class="container-xl">
+  <div class="img-container">
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <fa-icon [icon]="faCameraRetro" class="camera-icon"></fa-icon>
+          <h3>Keep calm <br> and <br> snap your <br> Dachshund</h3>
+        </div>
+        <div class="flip-card-back">
+          <img src="assets/images/dachshund2.png" alt="picture of Dachsund puppy">
+        </div>
+      </div>
+    </div>
+    <div *ngFor="let image of images" class="img-card">
+      <a [routerLink]="['/images', image.id]" id="random-imgs"><img [src]=image.url/></a>
+      <div class="img-card-fav">
+        <button type="button" class="btn-heart" title="Add to Favourites" (click)="addToFavourites(image)">
+          <fa-icon [icon]="faPlus" class="plus-icon"></fa-icon>
+          <fa-icon [icon]="faHeart" id="regular-heart"></fa-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="btn-container">
+    <button type="button" class="btn-green" (click)="reload()">Reload images</button>
+  </div>
+  <div class="footer">
+    <div class="footer-links">
+      <a href="https://github.com/l-p-n"><fa-icon [icon]="faGithub" class="icon-brand"></fa-icon></a>
+      <a href="https://www.linkedin.com/in/luizapn/"><fa-icon [icon]="faLinkedin" class="icon-brand"></fa-icon></a>
+    </div>
+    <div class="footer-copyright">
+      <p>Made with</p><fa-icon [icon]="fasHeart" class="icon-heart"></fa-icon><p>by l-p-n</p>
+    </div>
+  </div>
+</div>

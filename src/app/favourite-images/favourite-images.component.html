@@ -1,0 +1,21 @@
+<div class="container-xl">
+  <div class="nav-bar">
+    <a routerLink="/" class="btn-homepage mr">
+      <fa-icon [icon]="faHouse" class="icon-house"></fa-icon>Home
+    </a>
+    <a routerLink="/favourites" class="btn-favourites">
+      <fa-icon [icon]="fasHeart" class="solid-heart-icon"></fa-icon>Favourites
+    </a>
+  </div>
+
+  <div class="heading" *ngIf="image">
+    <h2>Dachshund #{{image.id}}</h2>
+  </div>
+  <div class="picture" *ngIf="image">
+    <img [src]=image.url class="dog-pic">
+  </div>
+
+  <div class="container-button-fav" *ngIf="image">
+    <button type="button" class="btn-add-favs" (click)="addToFavourites(image)">Add to Favourites</button>
+  </div>
+</div>

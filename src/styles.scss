@@ -1,0 +1,183 @@
+/* You can add global styles to this file, and also import other style files */
+$green: #6EC64E;
+$off-white: #EFEAE4;
+$darker-green: #73BA60;
+
+// FONTS & HEADINGS
+p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  margin: 0px;
+}
+
+h1 {
+  font-family: 'Caveat', cursive;
+  font-size: 78px;
+  font-weight: 700;
+  // color: $green;
+  margin: 0px;
+}
+
+h2 {
+  font-family: 'Caveat', cursive;
+  font-size: 56px;
+  font-weight: 700;
+  margin: 0px;
+  color: $green;
+}
+
+h3 {
+  font-family: 'Caveat', cursive;
+  font-size: 48px;
+  font-weight: 400;
+  margin: 0px;
+}
+
+h4 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px;
+  font-weight: 300;
+  margin: 0px;
+}
+
+ // BODY
+body {
+  background-color: #EFEAE4;
+  margin: 0px !important;
+  padding: 0px !important;
+  margin: 0px;
+}
+
+// BUTTONS
+.btn-green {
+  color: white;
+  padding: 14px 24px;
+  border-radius: 4px;
+  background: $green;
+  font-size: 16px;
+  border: none;
+  transition: 0.2s ease;
+
+  &:hover {
+    background: $darker-green;
+    color: white;
+  }
+}
+
+.btn-favourites {
+  text-decoration: none;
+  font-size: 16px;
+  background-color: white;
+  padding: 14px 24px;
+  border-radius: 4px;
+  font-family: 'Roboto';
+  color: palevioletred;
+
+  .solid-heart-icon {
+    padding-right: 10px;
+  }
+}
+
+.btn-homepage {
+  text-decoration: none;
+  font-size: 16px;
+  background-color: white;
+  padding: 14px 24px;
+  border-radius: 4px;
+  font-family: 'Roboto';
+  color: $green;
+
+  .icon-house {
+    padding-right: 10px;
+  }
+}
+
+.btn-add-favs {
+  font-size: 16px;
+  background-color: white;
+  padding: 14px 24px;
+  border-radius: 4px;
+  font-family: 'Roboto';
+  color: palevioletred;
+  border: none;
+
+  &:hover{
+    background-color: rgba(219, 112, 147, 0.5);
+    color: white;
+  }
+}
+
+//CONTAINERS / LAYOUT / CARDS
+.container-xl {
+  width: 1320px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.heading {
+  margin: 20px 0px;
+}
+
+.img-container {
+  display: grid;
+  grid-column-gap: 32px;
+  grid-row-gap: 42px;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+
+  .mv {
+    margin: 32px 0px;
+  }
+}
+
+.img-card {
+  width: 100%;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 4px;
+
+  img {
+    height: 300px;
+    width: 387px;
+    object-fit: cover;
+    padding: 16px 16px 0px 16px;
+  }
+
+  .img-card-fav {
+    padding: 8px 16px;
+    height: 45px;
+    text-align: end;
+
+    .btn-heart {
+      font-size: 26px;
+      color: palevioletred;
+      border: none;
+      padding: 0px;
+      background-color: white;
+      position: relative;
+
+      &:hover {
+        color: rgb(233, 66, 121);
+      }
+    }
+
+    .plus-icon {
+      font-size: 16px;
+      padding-right: 4px;
+      position: relative;
+      bottom: 4px;
+    }
+  }
+}
+
+// NAVBAR
+.nav-bar {
+  text-align: end;
+  margin-top: 42px;
+
+ .mr {
+    margin-right: 32px;
+  }
+}
