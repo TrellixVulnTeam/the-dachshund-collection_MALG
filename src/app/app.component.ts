@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  title = 'framework-techtest';
+  title = 'the-dachshund-collection';
 
   constructor() { }
 

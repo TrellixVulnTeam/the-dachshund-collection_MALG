@@ -6,7 +6,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "framework-techtest": {
+    "the-dachshund-collection": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/framework-techtest",
+            "outputPath": "dist/the-dachshund-collection",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -75,10 +75,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "framework-techtest:build:production"
+              "browserTarget": "the-dachshund-collection:build:production"
             },
             "development": {
-              "browserTarget": "framework-techtest:build:development"
+              "browserTarget": "the-dachshund-collection:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -86,7 +86,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "framework-techtest:build"
+            "browserTarget": "the-dachshund-collection:build"
           }
         },
         "test": {
@@ -110,5 +110,5 @@
       }
     }
   },
-  "defaultProject": "framework-techtest"
+  "defaultProject": "the-dachshund-collection"
 }
