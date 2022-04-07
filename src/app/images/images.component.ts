@@ -12,7 +12,7 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 })
 
 export class ImagesComponent implements OnInit {
-  loading = true;
+  // loading = true;
   images = images;
   fasHeart = fasHeart;
   faHeart = faHeart;
@@ -28,20 +28,15 @@ export class ImagesComponent implements OnInit {
     // Exclude adding duplicates to Favourites
     const favs = this.favouritesService.getFavouriteImages();
     if (favs.includes(image)) {
-      window.alert('This image has already been added to your Favourites')
+      window.alert('This image has already been added to your Favourites.')
     } else {
       this.favouritesService.addToFavourites(image);
       window.alert('Image added to your Favourites.');
     }
-    // replace regular heart icon with solid heart icon
-    // const heart = document.getElementById("regular-heart");
-    // const newElement = document.createElement('fa-icon');
-    // newElement.innerHTML = '[icon]="fasHeart"';
-    // heart.parentNode.replaceChild(newElement, heart);
   }
 
   reload () {
-    // reload five random non-duplicate images
+    // Load five random non-duplicate images
     let newImages = new Array();
     let index = 0;
 
@@ -63,28 +58,14 @@ export class ImagesComponent implements OnInit {
   }
 
   ngOnInit() {
-    // Set five random non-duplicate images
-    let randomIndex = 0;
-    const randomImages = new Array();
-
-    while (randomImages.length < 5) {
-      randomIndex = Math.floor(Math.random() * this.images.length);
-      if (this.images[randomIndex].used === false) {
-        this.images[randomIndex].used = true;
-        randomImages.push(this.images[randomIndex]);
-        // reset 'used' property to false
-      } else if (this.images.every(image => image.used === true) === true) {
-        this.images.map((img) => {
-          img.used = false
-        })
-      }
-    }
+    // Load five random non-duplicate images on initial page load/refresh
+    this.reload();
 
     // Show a loading state to avoid a flash of empty content
-    setTimeout(() => {
-      this.images = randomImages
-      this.loading = false;
-    }, 1000)
+    // setTimeout(() => {
+
+      // this.loading = false;
+    // }, 1000)
   }
 
 }

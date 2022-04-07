@@ -24,31 +24,15 @@ $off-white: #EFEAE4;
 }
 
 .favs {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  width: 1320px;
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 38px;
-}
-
-@media(max-width: 1326px) {
-  .favs {
-    width: 960px;
-  }
-
-}
-@media(max-width: 1090px) {
-  .favs {
-    width: 874px;
-  }
-}
-
-@media(max-width: 880px) {
-  .favs {
-    width: 422px;
-  }
+  // display: flex;
+  // justify-content: space-between;
+  // align-items: flex-end;
+  // width: 1320px;
+  // margin-right: auto;
+  // margin-left: auto;
+  margin-bottom: 54px;
+  margin-top: 18px;
+  text-align: end;
 }
 
 .flip-card {
