@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 $green: #6EC64E;
 $off-white: #EFEAE4;
-$darker-green: #73BA60;
+$darker-green: #4faf35;
 
 // FONTS & HEADINGS
 p {
@@ -132,7 +132,7 @@ body {
 }
 
 .img-card {
-  width: 100%;
+  // width: 100%;
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -159,7 +159,7 @@ body {
       position: relative;
 
       &:hover {
-        color: rgb(233, 66, 121);
+        color: rgb(200, 65, 110);
       }
     }
 
@@ -169,6 +169,36 @@ body {
       position: relative;
       bottom: 4px;
     }
+  }
+}
+
+@media(max-width: 1326px) {
+  .container-xl {
+    width: 1040px;
+  }
+
+  .img-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media(max-width: 1090px) {
+  .container-xl {
+    width: 874px;
+  }
+
+  .img-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media(max-width: 880px) {
+  .container-xl {
+    width: 540px;
+  }
+
+  .img-container {
+    grid-template-columns: 1fr;
   }
 }
 

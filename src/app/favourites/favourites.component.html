@@ -4,20 +4,14 @@
       <fa-icon [icon]="faHouse" class="icon-house"></fa-icon>Home
     </a>
   </div>
-
   <div class="heading">
     <h2>My favourites</h2>
   </div>
-  <div *ngFor=>
-
-  </div>
-
   <div class="img-container" style="margin: 60px 0px;">
     <div *ngFor="let favouriteImage of favouriteImages" class="img-card">
       <a [routerLink]="['/images', favouriteImage.id]"><img [src]=favouriteImage.url></a>
       <div class="img-card-fav">
-          <fa-icon [icon]="fasHeart" class="btn-heart"></fa-icon>
+          <fa-icon [icon]="fasHeart" class="heart"></fa-icon>
       </div>
     </div>
-
 </div>

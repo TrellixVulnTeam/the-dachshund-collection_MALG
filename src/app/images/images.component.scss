@@ -33,9 +33,27 @@ $off-white: #EFEAE4;
   margin-bottom: 38px;
 }
 
+@media(max-width: 1326px) {
+  .favs {
+    width: 960px;
+  }
+
+}
+@media(max-width: 1090px) {
+  .favs {
+    width: 874px;
+  }
+}
+
+@media(max-width: 880px) {
+  .favs {
+    width: 422px;
+  }
+}
+
 .flip-card {
   overflow: hidden;
-  width: 100%;
+  width: 419px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border-radius: 4px;
   background-color: transparent;

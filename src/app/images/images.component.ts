@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Image, images } from '../images';
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
-import { faCameraRetro, faPlus, faHeart as fasHeart, faVanShuttle, fas } from '@fortawesome/free-solid-svg-icons';
+import { faCameraRetro, faPlus, faHeart as fasHeart } from '@fortawesome/free-solid-svg-icons';
 import { FavouritesService } from '../favourites.service';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
